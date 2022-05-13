@@ -20,7 +20,9 @@ if(NOT EXISTS "${PROJECT_SOURCE_DIR}/submodules")
     message(FATAL_ERROR "The submodules were not downloaded! GIT_SUBMODULE was turned off or failed. Please update submodules and try again.")
 endif()
 
-add_subdirectory(submodules/falltergeist/vfs)
+if(NOT TARGET falltergeist::vfs)
+    add_subdirectory(submodules/falltergeist/vfs)
+endif()
 
 find_package(ZLIB REQUIRED)
 if(NOT ZLIB_FOUND)
