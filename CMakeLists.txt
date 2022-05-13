@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(falltergeist_vfs_dat2 VERSION 0.1.0 DESCRIPTION "Virtual File System DAT2 module")
+project(falltergeist_vfs_dat2 VERSION 0.1.1 DESCRIPTION "Virtual File System DAT2 module")
 
 find_package(Git QUIET)
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
