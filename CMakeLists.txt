@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(falltergeist_vfs_dat2 VERSION 0.1.0 DESCRIPTION "Virtual File System DAT2 module")
+project(falltergeist_vfs_dat2 VERSION 0.1.1 DESCRIPTION "Virtual File System DAT2 module")
 
 find_package(Git QUIET)
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
@@ -20,7 +20,9 @@ if(NOT EXISTS "${PROJECT_SOURCE_DIR}/submodules")
     message(FATAL_ERROR "The submodules were not downloaded! GIT_SUBMODULE was turned off or failed. Please update submodules and try again.")
 endif()
 
-add_subdirectory(submodules/falltergeist/vfs)
+if(NOT TARGET falltergeist::vfs)
+    add_subdirectory(submodules/falltergeist/vfs)
+endif()
 
 find_package(ZLIB REQUIRED)
 if(NOT ZLIB_FOUND)
