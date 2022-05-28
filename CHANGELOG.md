@@ -1,5 +1,8 @@
 Under development
 -----------------
+
+0.2.0 (2022-05-28)
+-----------------
 - [feature] Update vfs dependency. Use vfs-memory module (alexeevdv)
  
 0.1.1 (2022-05-13)
