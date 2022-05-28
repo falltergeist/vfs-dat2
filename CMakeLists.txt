@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(falltergeist_vfs_dat2 VERSION 0.1.1 DESCRIPTION "Virtual File System DAT2 module")
+project(falltergeist_vfs_dat2 VERSION 0.2.0 DESCRIPTION "Virtual File System DAT2 module")
 
 find_package(Git QUIET)
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
@@ -23,6 +23,11 @@ endif()
 if(NOT TARGET falltergeist::vfs)
     add_subdirectory(submodules/falltergeist/vfs)
 endif()
+
+if(NOT TARGET falltergeist::vfs::memory)
+    add_subdirectory(submodules/falltergeist/vfs-memory)
+endif()
+
 
 find_package(ZLIB REQUIRED)
 if(NOT ZLIB_FOUND)
@@ -63,4 +68,5 @@ target_link_libraries(
     ${PROJECT_NAME}
     ${ZLIB_LIBRARIES}
     falltergeist::vfs
+    falltergeist::vfs::memory
 )

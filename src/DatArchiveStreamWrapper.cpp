@@ -1,4 +1,9 @@
+// Project includes
 #include "falltergeist/vfs/DatArchiveStreamWrapper.h"
+
+// Third party includes
+
+// stdlib
 #include <algorithm>
 #include <string>
 
