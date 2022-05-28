@@ -1,8 +1,13 @@
 #pragma once
 
-#include "DatArchiveEntry.h"
-#include "DatArchiveStreamWrapper.h"
+// Project includes
+#include "falltergeist/vfs/DatArchiveEntry.h"
+#include "falltergeist/vfs/DatArchiveStreamWrapper.h"
+
+// Third party includes
 #include "falltergeist/vfs/IDriver.h"
+
+// stdlib
 #include <map>
 #include <memory>
 
