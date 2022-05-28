@@ -2,3 +2,6 @@
     path = submodules/falltergeist/vfs
     url = https://github.com/falltergeist/vfs.git
     tag = 0.2.0
+[submodule "submodules/falltergeist/vfs-memory"]
+	path = submodules/falltergeist/vfs-memory
+	url = https://github.com/falltergeist/vfs-memory.git
