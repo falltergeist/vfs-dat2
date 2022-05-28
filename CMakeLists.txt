@@ -24,6 +24,11 @@ if(NOT TARGET falltergeist::vfs)
     add_subdirectory(submodules/falltergeist/vfs)
 endif()
 
+if(NOT TARGET falltergeist::vfs::memory)
+    add_subdirectory(submodules/falltergeist/vfs-memory)
+endif()
+
+
 find_package(ZLIB REQUIRED)
 if(NOT ZLIB_FOUND)
     message(FATAL_ERROR "zlib library not found")
@@ -63,4 +68,5 @@ target_link_libraries(
     ${PROJECT_NAME}
     ${ZLIB_LIBRARIES}
     falltergeist::vfs
+    falltergeist::vfs::memory
 )

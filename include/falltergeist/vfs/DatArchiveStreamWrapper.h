@@ -1,9 +1,14 @@
 #pragma once
 
+// Project includes
+#include "falltergeist/vfs/DatArchiveEntry.h"
+
+// Third party includes
+
+// stdlib
 #include <fstream>
 #include <cstdint>
 #include <map>
-#include "DatArchiveEntry.h"
 
 namespace Falltergeist::VFS {
     class DatArchiveStreamWrapper final {

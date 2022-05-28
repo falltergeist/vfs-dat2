@@ -1,5 +1,11 @@
 #pragma once
 
+// Project includes
+
+// Third party includes
+
+// stdlib
+
 namespace Falltergeist::VFS {
     struct DatArchiveEntry {
         unsigned int packedSize = 0;
